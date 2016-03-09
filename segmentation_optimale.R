@@ -181,7 +181,7 @@ MatriceDeDistance_w_opt <- function(training_d, test_d, code_distance){
     
   }
   
-  plot(w_op_test)
+  #plot(w_op_test)
   
   #------- par curiosité -------------
   print("monyenne w_op_training = ")
@@ -211,7 +211,8 @@ MatriceDeDistance_w_opt <- function(training_d, test_d, code_distance){
       t2.paa <- as.vector(PAA(t2, w_op_training[j]))
       
       if(code_distance == 1){
-        distances[i, j] <- PaaDist(t1.paa, t2.paa, n, w_op_test[i]) # on fait l'hypoth?se que toutes les TS ont la m?me longueur d'ou n
+        #distances[i, j] <- PaaDist(t1.paa, t2.paa, n, w_op_test[i]) # on fait l'hypoth?se que toutes les TS ont la m?me longueur d'ou n
+        print("En cours de construction")
       }else{
         distances[i, j] <- dynamictw(t1.paa, t2.paa)
       }
@@ -259,4 +260,4 @@ test_w_op <- function(training_set, test_set, k, code_distance){
   
 }
 
-#test_w_op(Computers_TRAIN, Computers_TEST, 1, 1)
+test_w_op(synthetic_control_TRAIN, synthetic_control_TEST, 1, 2)

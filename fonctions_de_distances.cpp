@@ -194,3 +194,18 @@ double dynamictw(const std::vector<double>& t1, const std::vector<double>& t2) {
   
   return d;
 }
+
+
+
+/*
+ * Calcul la distance entre deux séries temporelles représentées sous le format PAA
+ *  - x1 : est une série temporelle
+ *  - x2 : est une série temporelle
+ *  - n : taille des séries temporelles t1 et t2 d'ou sont calculé les représentations x1 et x2
+ *  - W : Nombre de segments de la représentation PAA
+ *  - retourne la distance PAA
+ */
+// [[Rcpp::export]]
+double PaaDist(NumericVector x1, NumericVector x2, int n, int w){
+  return 0;
+}
