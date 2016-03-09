@@ -162,7 +162,7 @@ MatriceDeDistance_w_opt <- function(training_d, test_d, code_distance){
     
     n                <- length(b2)
     lg_min           <- 1
-    lg_max           <- floor(n/ceiling((n * 0.05) + 1))
+    lg_max           <- floor(n/ceiling(n * 0.05))
     w_op_training[i] <- longueur_optimale(lg_min, lg_max, t2) # a voir znormalized
     
   }
@@ -176,7 +176,7 @@ MatriceDeDistance_w_opt <- function(training_d, test_d, code_distance){
     
     n            <- length(b1)
     lg_min       <-  1
-    lg_max       <- floor(n/ceiling((n * 0.05) + 1))
+    lg_max       <- floor(n/ceiling(n * 0.05))
     w_op_test[i] <- longueur_optimale(lg_min, lg_max, t1) # a voir znormalized
     
   }
